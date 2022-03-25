@@ -1,5 +1,15 @@
 'use strict';
 
+var clicks = 0;
+    function onClickAdd() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    function onClickSub() {
+        clicks -= 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+
 const switcher = document.querySelector('.btn');
 
 switcher.addEventListener('click', function() {
