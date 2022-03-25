@@ -78,4 +78,8 @@ li {
     background-color: var(--btnBg);
   }
 
+  button {
+    touch-action: manipulation;
+}
+
   .btn:focus {outline-style: none;}
