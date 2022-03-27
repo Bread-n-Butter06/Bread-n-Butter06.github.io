@@ -33,22 +33,28 @@
         </div>
         <a href="teleop.html" onclick="addDataAuto()">Next</a> 
     </div>
-
+    <br>
     <div class="taxi">
         <label for="taxi">Taxied?</label>
         <input type="checkbox" id="taxi-input" name="taxi" size="10">
     </div>
     <!--  COUNTER  -->
+    <label for="auto-low-hub" class="auto-low-hub-txt">Lower Cargo Scored:</label>
     <div class="auto-low-hub">
-        <label for="auto-low-hub">Lower Cargo Scored:</label>
-        <input type="text" id="auto-low-hub-input" name="autoLowHub" required
-               maxlength="8" size="10">
+        <!--<input type="text" id="auto-low-hub-input" name="autoLowHub" required
+               maxlength="8" size="10">-->
+        <button class="auto-low-hub-downbtn" onClick="onClickSubAL()">-</button>
+        <p><a id="autoLowHubClicks" class="btndis">0</a></p>
+        <button class="auto-low-hub-upbtn" onClick="onClickAddAL()">+</button>
     </div>
     <!--  COUNTER  -->
+    <label for="auto-up-hub" class="auto-up-hub-txt">Upper Cargo Scored:</label>
     <div class="auto-up-hub">
-        <label for="auto-up-hub">Upper Cargo Scored:</label>
-        <input type="text" id="auto-up-hub-input" name="autoUpHub" required
-               maxlength="8" size="10">
+        <!--<input type="text" id="auto-up-hub-input" name="autoUpHub" required
+               maxlength="8" size="10">-->
+        <button class="auto-up-hub-downbtn" onClick="onClickSubAU()">-</button>
+        <p><a id="autoUpHubClicks" class="btndis">0</a></p>
+        <button class="auto-up-hub-upbtn" onClick="onClickAddAU()">+</button>
     </div>
   
     <script src="app.js"></script>

@@ -33,18 +33,23 @@
         </div>
         <a href="postmatch.html" onclick="addDataTeleOp()">Next</a> 
     </div>
+    <br>
+    <!--  COUNTER  -->
+    <label for="tele-low-hub" class="tele-low-hub-txt">Lower Cargo Scored:</label>
+    <div class="auto-low-hub">
+        <button class="tele-low-hub-downbtn" onClick="onClickSubAL()">-</button>
+        <p><a id="teleLowHubClicks" class="btndis">0</a></p>
+        <button class="tele-low-hub-upbtn" onClick="onClickAddAL()">+</button>
+    </div>
 
     <!--  COUNTER  -->
-    <div class="auto-low-hub">
-        <label for="auto-low-hub">Lower Cargo Scored:</label>
-        <input type="text" id="auto-low-hub-input" name="autoLowHub" required
-               maxlength="8" size="10">
+    <label for="tele-up-hub" class="tele-up-hub-txt">Upper Cargo Scored:</label>
+    <div class="tele-up-hub">
+        <button class="tele-up-hub-downbtn" onClick="onClickSubAU()">-</button>
+        <p><a id="teleUpHubClicks" class="btndis">0</a></p>
+        <button class="tele-up-hub-upbtn" onClick="onClickAddAU()">+</button>
     </div>
-    <!--  COUNTER  -->
-    <div class="auto-up-hub">
-        <label for="auto-up-hub">Upper Cargo Scored:</label>
-        <input type="text" id="auto-up-hub-input" name="autoUpHub" required
-               maxlength="8" size="10">
+
     </div>
     <div class="climb-attempt">
         <label for="climb-attempt">Climb Attempt?</label>

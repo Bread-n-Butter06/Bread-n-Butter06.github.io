@@ -137,6 +137,58 @@ let playedDefenseRating = "";
 let comments = "";
 let dataId = Date;
 
+//counter buttons
+//autonomous lower hub
+var autoLowHubClicks = 0;
+    //increase auto lower hub counter on click of add button
+    function onClickAddAL() {
+        autoLowHubClicks += 1;
+        document.getElementById("autoLowHubClicks").innerHTML = autoLowHubClicks;
+    };
+    //decrease auto lower counter on click of subtract button
+    function onClickSubAL() {
+        autoLowHubClicks -= 1;
+        document.getElementById("autoLowHubClicks").innerHTML = autoLowHubClicks;
+    };
+//autonomous upper hub
+var autoUpHubClicks = 0;
+    function onClickAddAU() {
+        //increase auto upper hub counter on click of add button
+        autoUpHubClicks += 1;
+        document.getElementById("autoUpHubClicks").innerHTML = autoUpHubClicks;
+    };
+    //increase auto upper counter on click of add button
+    function onClickSubAU() {
+        autoUpHubClicks -= 1;
+        document.getElementById("autoUpHubClicks").innerHTML = autoUpHubClicks;
+    };
+
+
+//tele-op lower hub
+var teleUpHubClicks = 0;
+    //increase tele-op lower hub counter on click of add button
+    function onClickAddTU() {
+        teleUpHubClicks += 1;
+        document.getElementById("teleUpHubClicks").innerHTML = teleUpHubClicks;
+    };
+    //decrease tele-op lower hub counter on click of subtract button
+    function onClickSubTU() {
+        teleUpHubClicks -= 1;
+        document.getElementById("autoUpHubClicks").innerHTML = teleUpHubClicks;
+    };
+//tele-op upper hub
+var teleLowHubClicks = 0;
+    //increase tele-op upper hub counter on click of add button
+    function onClickAddTL() {
+        teleLowHubClicks += 1;
+        document.getElementById("teleLowHubClicks").innerHTML = teleLowHubClicks;
+    };
+    //decrease tele-op upper hub counter on click of subtract button
+    function onClickSubTL() {
+        teleLowHubClicks -= 1;
+        document.getElementById("teleLowHubClicks").innerHTML = teleLowUpHubClicks;
+    };
+
 //somthing to trigger js to take data
 //allData.push(input); //adds each datum to allData
 function addDataPreMatch(){ //"next" button at the end of each page, assigns user imput to var

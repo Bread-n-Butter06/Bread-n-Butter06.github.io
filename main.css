@@ -36,6 +36,10 @@ p{
   text-align: center;
 }
 
+.comments p{
+  text-align: left;
+}
+
 /* hide table when the time is right
 
 table {
@@ -129,15 +133,15 @@ table {
 
 /*This is bela's formatting stuff that caused merge conflicts feel free to delete lmao*/
 .team-number, .match-number, .initials, .robot-position, .no-show,  
-.taxi, .auto-low-hub, .auto-up-hub, 
-.tele-low-hub, .tele-up-hub, .climb-attempt, .climb-level, .disconnected, .played-defense, .was-defended,
-.defense-rating{
+.taxi, .auto-low-hub, .auto-low-hub-txt, .auto-up-hub-txt, .auto-up-hub, 
+.tele-low-hub, .tele-up-hub, .tele-low-hub-txt, .tele-up-hub-txt, .climb-attempt, .climb-level, .disconnected, .played-defense, .was-defended,
+.defense-rating, .comments{
   padding: 10px;
   color: var(--black);
   font-weight: bolder;
 }
 
-/* moves inputs away from left edge of page */
+/* moves everything away from left edge of page */
 label{
   margin-left: 10px;
 }
@@ -147,10 +151,6 @@ label{
   margin-right: 10px;
 }
 
-.initials input, .taxi input, .tele-low-hub input, .defense-rating input{
-  margin-top: 20px;
-}
-
 /* padding changes size of input box, rounds edges */
 input {
   padding: 10px;
@@ -158,15 +158,60 @@ input {
   border-radius: 20px;
 }
 
-/* makes input boxes bigger */
+/* makes input checkboxes bigger */
 input[type=checkbox]{
   transform: scale(3);
   padding: 30px;
 }
 
+/* change size of box for select dropdown
 select{
   height:  60px;
   width: auto;
   margin: 10px;
 }
 
+/* counter buttons */
+/* down buttons */
+.auto-low-hub-downbtn, .auto-up-hub-downbtn, .tele-low-hub-downbtn, .tele-up-hub-downbtn {
+  /*position: absolute;
+  top: 250px;*/
+  left: 20px;
+  height: 90px;
+  width: 90px;
+  margin-right: 30px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: none;
+  color: var(--white);
+  font-size: 40px;
+  background-color: var(--maroon);
+}
+
+/* up buttons */
+.auto-low-hub-upbtn, .auto-up-hub-upbtn, .tele-low-hub-upbtn, .tele-up-hub-upbtn{
+  /*position: absolute;
+  top: 250px;*/
+  left: 100px;
+  height: 90px;
+  width: 90px;
+  margin-left: 30px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: none;
+  color: var(--white);
+  font-size: 40px;
+  background-color: var(--maroon);
+}
+
+/* displaying buttons and button display inline, not vertical */
+.auto-low-hub, .auto-up-hub, .tele-low-hub, .tele-up-hub{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+/* enlarges number between up and down buttons */
+a.btndis{
+  font-size: 50px;
+}
