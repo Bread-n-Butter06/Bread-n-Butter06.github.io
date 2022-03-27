@@ -1,6 +1,7 @@
 :root {
    --maroon: #8f2052;
    --orange: #d05323;
+   --dark-orange: #a03e18;
    --white: #ffffff;
    --light-gray: #d4c5c5;
    --gray: #b0a7a7;
@@ -12,22 +13,43 @@
     font-family: 'Roboto', sans-serif;
   }
 
+/* text in title */
 h1 {
   background-color: var(--orange);
   color: var(--maroon);
-  padding: 16px;
+  padding: 12px;
   font-size: 20px;
+  text-align: center;
 }
+
+/* disables double touch to zoom on mobile*/
+button {
+    touch-action: manipulation;
+}
+
+/* removes underline etc on all links */
+a{
+  text-decoration: none;
+}
+
+
 
 .navbar {
   overflow: hidden;
   color: var(--black);
   font-family: 'Roboto', sans-serif;
   background: var(--dark-gray);
+
+  /* centers links on nav bar*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .navbar a {
   float: left;
+  display: block;
   font-size: 16px;
   background-color: var(--dark-gray);
   color: var(--white);
@@ -65,8 +87,13 @@ h1 {
   display: none;
   position: absolute;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   z-index: 1;
+}
+
+/* dropdown displays on hover over "All Screens"*/
+.allScreens-dropdown:hover .allScreens-dropdown-content{
+  display: block;
 }
   
 /* Links inside the dropdown */
@@ -80,9 +107,9 @@ h1 {
   text-align: left;
 }
   
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on hover and color of current page*/
 .allScreens-dropdown-content a:hover {
-  background-color: var(--maroon);
+  background-color: var(--dark-orange);
 }
   
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -90,6 +117,7 @@ h1 {
   display: block;
 }
 
+/*This is bela's formatting stuff that caused merge conflicts feel free to delete lmao*/
 .team-number, .match-number, .initials {
   padding: 30px;
   color: var(--black);
@@ -101,3 +129,26 @@ h1 {
 } 
 
   
+/*----------------------------------------------------------------------*/
+
+
+/* Em's column code for future */
+.column {
+  float: left;
+  width: 50%;
+  padding-top: 20px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1100px) {
+  .column {
+    width: 100%;
+  }
+}  
