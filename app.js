@@ -186,7 +186,7 @@ var teleLowHubClicks = 0;
     //decrease tele-op upper hub counter on click of subtract button
     function onClickSubTL() {
         teleLowHubClicks -= 1;
-        document.getElementById("teleLowHubClicks").innerHTML = teleLowUpHubClicks;
+        document.getElementById("teleLowHubClicks").innerHTML = teleLowHubClicks;
     };
 
 //somthing to trigger js to take data
@@ -201,13 +201,13 @@ function addDataPreMatch(){ //"next" button at the end of each page, assigns use
 
 function addDataAuto(){ //"next" button at the end of each page
   taxi = document.getElementById("taxi-input").value;
-  autoLowHub = document.getElementById("auto-low-hub-input").value;
-  autoUpHub = document.getElementById("auto-high-hub-input").value;
+  autoLowHub = autoUpHubClicks;
+  autoUpHub = autoUpHubClicks;
 }
 
 function addDataTeleOp(){ //"next" button at the end of each page
-  teleLowHub = document.getElementById("tele-low-hub-input").value;
-  teleUpHub = document.getElementById("tele-up-hub-input").value;
+  teleLowHub = teleUpHubClicks;
+  teleUpHub = teleUpHubClicks;
   climbAttempt = document.getElementById("climb-attempt-input").value;
   climbLevel = document.getElementById("climb-level-input").value;
   disconnected = document.getElementById("disconnected-input").value;
