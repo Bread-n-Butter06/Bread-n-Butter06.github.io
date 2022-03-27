@@ -24,7 +24,7 @@
  * 17. Data Entry Id - Date
  */
 
-let allData = []; 
+const allData = []; 
   let teamNum = 0;
   let matchNum = 0;
   let taxi = false;
@@ -43,6 +43,61 @@ let allData = [];
   let noShow = false;
   let scoutInitials = "";
   let dataId = Date;
+
+allData[0] = teamNum;
+allData[1] = matchNum;
+allData[2] = taxi;
+allData[3] = autoLowHub;
+allData[4] = autoUpHub;
+allData[5] = teleLowHub;
+allData[6] = teleUpHub;
+allData[7] = climbAttempt;
+allData[8] = climbLevel;
+allData[9] = disconnected;
+allData[10] = playedDefense;
+allData[11] = wasDefended;
+allData[12] = playedDefenseRating;
+allData[13] = comments;
+allData[14] = noShow;
+allData[15] = scoutInitials;
+allData[16] = dataId;
+
+const data = [
+    ["rahul", "delhi", "accounts dept"],
+    ["rajeev", "UP", "sales dept"]
+];
+
+let csvContent = "data:text/csv;charset=utf-8,";
+
+data.forEach(function(rowArray) {
+    let row = rowArray.join(",");
+    csvContent += row + "\r\n";
+});
+
+var encodedUri = encodeURI(csvContent);
+window.open(encodedUri);
+
+var encodedUri = encodeURI(csvContent);
+var link = document.createElement("a");
+link.setAttribute("href", encodedUri);
+link.setAttribute("download", "my_data.csv");
+document.body.appendChild(link); 
+link.click();
+
+const data = [
+    ["rahul", "delhi", "accounts dept"],
+    ["rajeev", "UP", "sales dept"]
+];
+var csv = data.map(function(d){
+       return JSON.stringify(d);
+    })
+    .join('\n') 
+    .replace(/(^\[)|(\]$)/mg, '');
+console.log(csv);
+
+
+
+
   
 let submitForm = function(allData) { //unfinished function
   allData.preventDefault()
