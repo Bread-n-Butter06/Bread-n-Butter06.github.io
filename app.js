@@ -291,4 +291,20 @@ function dropDown() {
         }
     }
   } 
+
+  /*function submitData() {
+     src="https://code.jquery.com/jquery-3.6.0.min.js"
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw4q31hJU917ct4kn4epL9z29OF91uIWCAukjH4SoZsmnilFux0YGk1Y82FLSgybOwc/exec'
+        const form = document.forms['google-sheet']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            //.then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
+            //.catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+        })
+    
+  }*/
   
