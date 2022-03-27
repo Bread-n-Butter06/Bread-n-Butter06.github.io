@@ -24,7 +24,8 @@
  * 17. Data Entry Id - Date
  */
 
-const allData = []; 
+//initialize 2D arrary allData 
+/*const allData = []; 
   let teamNum = 0;
   let matchNum = 0;
   let taxi = false;
@@ -42,9 +43,9 @@ const allData = [];
   let comments = "";
   let noShow = false;
   let scoutInitials = "";
-  let dataId = Date;
+  let dataId = Date;*/
 
-allData[0] = teamNum;
+/* allData[0] = teamNum;
 allData[1] = matchNum;
 allData[2] = taxi;
 allData[3] = autoLowHub;
@@ -60,55 +61,68 @@ allData[12] = playedDefenseRating;
 allData[13] = comments;
 allData[14] = noShow;
 allData[15] = scoutInitials;
-allData[16] = dataId;
+allData[16] = dataId; */
 
-const data = [
-    ["rahul", "delhi", "accounts dept"],
-    ["rajeev", "UP", "sales dept"]
-];
+/*const data = [
+  ["rahul", "delhi", "accounts dept"],
+  ["rajeev", "UP", "sales dept"]
+];*/
 
-let csvContent = "data:text/csv;charset=utf-8,";
+const allData =[] ; /*= [
+  "apple",
+  "orange",
+  "banana",
+  "chorus fruit",
+  "Hylian shroom",
+  "Enchanted Apple",
+  "Gum gum fruit"
+];*/
 
-data.forEach(function(rowArray) {
-    let row = rowArray.join(",");
-    csvContent += row + "\r\n";
-});
+//converts allData to URI to CSV, downloads a file created client-side
+//function convertToCSV(allData) {
 
-var encodedUri = encodeURI(csvContent);
-window.open(encodedUri);
+    //let csvContent = "data:text/csv;charset=utf-8,";
+    //let csvContent = "data:text/csv;charset=utf-8,"; 
+    //+ data.map(e => e.join(",")).join("\n");
 
-var encodedUri = encodeURI(csvContent);
-var link = document.createElement("a");
-link.setAttribute("href", encodedUri);
-link.setAttribute("download", "my_data.csv");
-document.body.appendChild(link); 
-link.click();
+    /*allData.forEach(function(array) {
+        csvContent += array.join(",\n");
+    });*/
 
-const data = [
-    ["rahul", "delhi", "accounts dept"],
-    ["rajeev", "UP", "sales dept"]
-];
-var csv = data.map(function(d){
-       return JSON.stringify(d);
+    //csvContent = allData.join(",");
+
+    /*var encodedUri = encodeURI(csvContent);
+    window.open(encodedUri);*/
+
+    /*var encodedUri = encodeURI(csvContent);
+    var link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "my_data.csv");
+    document.body.appendChild(link); 
+    link.click();
+}*/
+
+/*var csv = data.map(function(d){
+       return JSON.stringify(d); //stringify inserts data within double quotes
     })
     .join('\n') 
     .replace(/(^\[)|(\]$)/mg, '');
-console.log(csv);
-
-
-
+console.log(csv);*/
 
   
-let submitForm = function(allData) { //unfinished function
-  allData.preventDefault()
+function submitData(allData) { 
+  //allData.preventDefault()
 
-  let allData = 
+  allData = 
   [
     teamNum, matchNum, taxi, autoLowHub, autoUpHub, /*Pre-Match and Auto*/
     teleLowHub, teleUpHub, climbAttempt, climbLevel, /*Teleop and End*/
     disconnected, playedDefense, /*Post-Match*/
     wasDefended, playedDefenseRating, comments, noShow, scoutInitials, dataId.now() /*Data not in 422 sheet*/
   ]
+  
+  console.log(allData);
+  //convertToCSV(allData);
 
 }
 
