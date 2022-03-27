@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Team 401 Scouting</title>
+    <link rel="stylesheet" href="main.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body onload="makeTable()">
+    <a href="index.html"><h1>FRC Team 401 Scouting</h1></a>
+    <div class="navbar">
+        <a href="teleop.html">Back</a>
+        <div class="allScreens-dropdown">
+            <button onclick="dropDown()" class="allScreens-dropdown-btn">Post-match
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="allScreensDropdown" class="allScreens-dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="prematch.html">Pre-Match</a>
+              <a href="auto.html">Autonomous</a>
+              <a href="teleop.html">Teleop</a>
+              <a href="postmatch.html">Post-Match</a>
+              <a href="submit.html">Submit</a>
+            </div>
+        </div>
+        <a href="postmatch.html">Next</a> 
+    </div>
+  
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+
+    <p>Congrats! The data has been added to your spreadsheet.</p>
+
+    <table>
+        <tr> <!--start of column-->
+          <th>Team_#</th> <!--header for table on each row-->
+          <th>Match_#</th>
+          <th>Taxi</th>
+          <th>aLower</th>
+          <th>aUpper</th>
+          <th>tLower</th>
+          <th>tUpper</th>
+          <th>Attempted</th>
+          <th>F_L_M_H_T</th>
+          <th>Disconnected</th>
+          <th>Defense</th>
+          <th>Defense_Rating</th>
+          <th>Was_Defended</th>
+          <th>Comments</th>
+          <th>No_Show</th>
+          <th>Scout_Initials</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td id="Team_#"></td>
+          <td id="Match_#"></td>
+          <td id="Taxi"></td>
+          <td id="aLower"></td>
+          <td id="aUpper"></td>
+          <td id="tLower"></td>
+          <td id="tUpper"></td>
+          <td id="Attempted"></td>
+          <td id="F_L_M_H_T"></td>
+          <td id="Disconnected"></td>
+          <td id="Defense"></td>
+          <td id="Defense_Rating"></td>
+          <td id="Was_Defended"></td>
+          <td id="Comments"></td>
+          <td id="No_Show"></td>
+          <td id="Scout_Initials"></td>
+          <td id="Date"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

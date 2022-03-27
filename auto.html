@@ -26,11 +26,29 @@
               <a href="index.html">Home</a>
               <a href="prematch.html">Pre-Match</a>
               <a href="auto.html">Autonomous</a>
-              <a href="teleop.html">Teleop</a>
+              <a href="teleop.html" onclick="addDataAuto()">Teleop</a>
               <a href="postmatch.html">Post-Match</a>
+              <a href="submit.html">Submit</a>
             </div>
         </div>
-        <a href="teleop.html">Next</a> 
+        <a href="teleop.html" onclick="addDataAuto()">Next</a> 
+    </div>
+
+    <div class="taxi">
+        <label for="taxi">Taxi</label>
+        <input type="checkbox" id="taxi-input" name="taxi" size="10">
+    </div>
+    <!--  COUNTER  -->
+    <div class="auto-low-hub">
+        <label for="auto-low-hub">Cargo Scored:</label>
+        <input type="text" id="auto-low-hub-input" name="autoLowHub" required
+               maxlength="8" size="10">
+    </div>
+    <!--  COUNTER  -->
+    <div class="auto-up-hub">
+        <label for="auto-up-hub">Cargo Scored:</label>
+        <input type="text" id="auto-up-hub-input" name="autoUpHub" required
+               maxlength="8" size="10">
     </div>
   
     <script src="app.js"></script>

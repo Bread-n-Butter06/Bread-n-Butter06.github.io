@@ -27,10 +27,56 @@
               <a href="prematch.html">Pre-Match</a>
               <a href="auto.html">Autonomous</a>
               <a href="teleop.html">Teleop</a>
-              <a href="postmatch.html">Post-Match</a>
+              <a href="postmatch.html" onclick="addDataTeleOp()">Post-Match</a>
+              <a href="submit.html">Submit</a>
             </div>
         </div>
-        <a href="postmatch.html">Next</a> 
+        <a href="postmatch.html" onclick="addDataTeleOp()">Next</a> 
+    </div>
+
+    <!--  COUNTER  -->
+    <div class="auto-low-hub">
+        <label for="auto-low-hub">Cargo Scored:</label>
+        <input type="text" id="auto-low-hub-input" name="autoLowHub" required
+               maxlength="8" size="10">
+    </div>
+    <!--  COUNTER  -->
+    <div class="auto-up-hub">
+        <label for="auto-up-hub">Cargo Scored:</label>
+        <input type="text" id="auto-up-hub-input" name="autoUpHub" required
+               maxlength="8" size="10">
+    </div>
+    <div class="climb-attempt">
+        <label for="climb-attempt">Taxi</label>
+        <input type="checkbox" id="climb-attempt-input" name="climbAttempt" size="10">
+    </div>
+    <div class="climb-level">
+        <label for="climb-level">Climb Level</label>
+        <select id="climb-level-input" name="climbLevel">
+            <option>Fail</option>
+            <option>Low</option>
+            <option>Middle</option>
+            <option>High</option>
+            <option>Traversal</option>
+        </select>
+    </div>
+
+    <!-- INCORRECT INPUT TYPES  -->
+
+    <div class="disconnected">
+        <label for="disconnected">Disconnected</label>
+        <input type="text" id="disconnected-input" name="disconnected" required
+               maxlength="3" size="10">
+    </div>
+    <div class="played-defense">
+        <label for="played-defense">Defense</label>
+        <input type="text" id="match-number-input" name="matchNumber" required
+               maxlength="8" size="10">
+    </div>
+    <div class="was-defended">
+        <label for="was-defended">Was Defended</label>
+        <input type="text" id="was-defended-input" name="wasDefended" required
+               maxlength="8" size="10">
     </div>
   
     <script src="app.js"></script>

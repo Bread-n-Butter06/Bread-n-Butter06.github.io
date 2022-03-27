@@ -68,7 +68,7 @@ allData[16] = dataId; */
   ["rajeev", "UP", "sales dept"]
 ];*/
 
-const allData =[] ; /*= [
+ /*= [
   "apple",
   "orange",
   "banana",
@@ -109,22 +109,107 @@ const allData =[] ; /*= [
     .replace(/(^\[)|(\]$)/mg, '');
 console.log(csv);*/
 
+
+
+//pre-match
+let scoutInitials = "";
+let matchNum = 0;
+let teamNum = 0;
+let robotPosition = "";
+let noShow = false;
+
+//auto
+let taxi = false;
+let autoLowHub = 0;
+let autoUpHub = 0;
+
+//tele op
+let teleLowHub = 0;
+let teleUpHub = 0;
+let climbAttempt = false;
+let climbLevel = "";
+let disconnected = 0;
+let playedDefense = 0;
+let wasDefended = "";
+
+//post-match
+let playedDefenseRating = "";
+let comments = "";
+let dataId = Date;
+
+//somthing to trigger js to take data
+//allData.push(input); //adds each datum to allData
+function addDataPreMatch(){ //"next" button at the end of each page, assigns user imput to var
+  scoutInitials = document.getElementById("initials-input").value; //goes through ids and data for that specific page
+  matchNum = document.getElementById("match-number-input").value;
+  teamNum = document.getElementById("team-number-input").value;
+  robotPosition = document.getElementById("robot-position-input").value;
+  noShow = document.getElementById("no-show-imput").value;
+}
+
+function addDataAuto(){ //"next" button at the end of each page
+  taxi = document.getElementById("taxi-input").value;
+  autoLowHub = document.getElementById("auto-low-hub-input").value;
+  autoUpHub = document.getElementById("auto-high-hub-input").value;
+}
+
+function addDataTeleOp(){ //"next" button at the end of each page
+  teleLowHub = document.getElementById("tele-low-hub-input").value;
+  teleUpHub = document.getElementById("tele-up-hub-input").value;
+  climbAttempt = document.getElementById("climb-attempt-input").value;
+  climbLevel = document.getElementById("climb-level-input").value;
+  disconnected = document.getElementById("disconnected-input").value;
+  playedDefense = document.getElementById("played-defense-input").value;
+  wasDefended = document.getElementById("was-defended-input").value;
+}
+
+function addDataPostMatch(){ //"next" button at the end of each page
+  playedDefenseRating = document.getElementById("initials-input").value;
+  comments = document.getElementById("comments-input").value;
+  dataId = document.getElementById("data-id-input").value;
+}
+
+//triggered upon loading submit page
+function makeTable(){ //replaces td tag by id with js var
+  document.getElementById("Team_#").innerHTML = teamNum;
+  document.getElementById("Match_#").innerHTML = matchNum;
+  document.getElementById("Taxi").innerHTML = taxi;
+  document.getElementById("aLower").innerHTML = autoLowHub;
+  document.getElementById("aUpper").innerHTML = autoUpHun;
+  document.getElementById("tLower").innerHTML = teleLowHub;
+  document.getElementById("tUpper").innerHTML = teleUpHub; //var defined above;
+  document.getElementById("Attempted").innerHTML = climbAttempt;
+  document.getElementById("F_L_M_H_T").innerHTML = climbLevel;
+  document.getElementById("Disconnected").innerHTML = disconnected;
+  document.getElementById("Defense").innerHTML = playedDefense;
+  document.getElementById("Defense_Rating").innerHTML = playedDefenseRating;
+  document.getElementById("Was_Defended").innerHTML = wasDefended;
+  document.getElementById("Comments").innerHTML = comments;
+  document.getElementById("No_Show").innerHTML = noShow;
+  document.getElementById("Scount_Initials").innerHTML = scoutInitials;
+  document.getElementById("Date").innerHTML = dataId;
+}
+
+//function othername() {
+ //   var input = document.getElementById("userInput").value;
+//}
+
   
-function submitData(allData) { 
+//function submitData(allData) { 
   //allData.preventDefault()
 
-  allData = 
-  [
-    teamNum, matchNum, taxi, autoLowHub, autoUpHub, /*Pre-Match and Auto*/
-    teleLowHub, teleUpHub, climbAttempt, climbLevel, /*Teleop and End*/
-    disconnected, playedDefense, /*Post-Match*/
-    wasDefended, playedDefenseRating, comments, noShow, scoutInitials, dataId.now() /*Data not in 422 sheet*/
-  ]
+  //allData = 
+  //[
+    //teamNum, matchNum, taxi, autoLowHub, autoUpHub, /*Pre-Match and Auto*/
+    //teleLowHub, teleUpHub, climbAttempt, climbLevel, /*Teleop and End*/
+    //disconnected, playedDefense, /*Post-Match*/
+    //wasDefended, playedDefenseRating, comments, noShow, scoutInitials, dataId.now() /*Data not in 422 sheet*/
+ // ]
   
-  console.log(allData);
+  //console.log(allData);
   //convertToCSV(allData);
 
-}
+//}
 
 const allScreensDropdown = document.getElementById("allScreensDropdown");
 

@@ -28,9 +28,20 @@
               <a href="auto.html">Autonomous</a>
               <a href="teleop.html">Teleop</a>
               <a href="postmatch.html">Post-Match</a>
+              <a href="submit.html" onclick="addDataPostMatch()">Submit</a>
             </div>
         </div>
-        <a href="postmatch.html">Next</a> 
+        <a href="postmatch.html" onclick="addDataPostMatch()">Next</a> 
+    </div>
+
+    <div class="played-defense-rating">
+        <label for="played-defense-rating">Defense Rating</label>
+        <input type="text" id="played-defense-rating-input" name="playedDefenseRating" required
+               maxlength="3" size="10">
+    </div>
+    <div class="comments">
+        <label for="comments">Comments </label>
+        <textarea id="comments-input" name="comments" rows="8" cols="64">Comments</textarea>
     </div>
   
     <script src="app.js"></script>

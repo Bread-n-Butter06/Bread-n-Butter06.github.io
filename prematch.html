@@ -25,12 +25,13 @@
             <div id="allScreensDropdown" class="allScreens-dropdown-content">
               <a href="index.html">Home</a>
               <a href="prematch.html">Pre-Match</a>
-              <a href="auto.html">Autonomous</a>
+              <a href="auto.html" onclick="addDataPreMatch()">Autonomous</a>
               <a href="teleop.html">Teleop</a>
               <a href="postmatch.html">Post-Match</a>
+              <a href="submit.html">Submit</a>
             </div>
         </div>
-        <a href="auto.html">Next</a> 
+        <a href="auto.html" onclick="addDataPreMatch()">Next</a> 
     </div>
 
     <div class="initials">
@@ -47,6 +48,21 @@
         <label for="team-number">Team #:</label>
         <input type="text" id="team-number-input" name="teamNumber" required
                maxlength="8" size="10">
+    </div>
+    <div class="robot-position">
+        <label for="robot-position">Robot Position</label>
+        <select id="robot-position-input" name="robotPosition">
+            <option>Blue 1</option>
+            <option>Red 1</option>
+            <option>Blue 2</option>
+            <option>Red 2</option>
+            <option>Blue 3</option>
+            <option>Red 3</option>
+        </select>
+    </div>
+    <div class="no-show">
+        <label for="noShow">Taxi</label>
+        <input type="checkbox" id="no-show-input" name="noShow" size="10">
     </div>
   
     <script src="app.js"></script>
