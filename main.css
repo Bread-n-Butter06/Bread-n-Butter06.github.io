@@ -90,4 +90,14 @@ h1 {
   display: block;
 }
 
+.team-number, .match-number, .initials {
+  padding: 30px;
+  color: var(--black);
+  font-weight: bolder;
+}
+
+.input[type=text] {
+  border-radius: 5px;
+} 
+
   
