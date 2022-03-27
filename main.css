@@ -13,6 +13,7 @@
     font-family: 'Roboto', sans-serif;
   }
 
+/* text in title */
 h1 {
   background-color: var(--orange);
   color: var(--maroon);
@@ -21,10 +22,17 @@ h1 {
   text-align: center;
 }
 
-/*disables double touch to zoom on mobile*/
+/* disables double touch to zoom on mobile*/
 button {
     touch-action: manipulation;
 }
+
+/* removes underline etc on all links */
+a{
+  text-decoration: none;
+}
+
+
 
 .navbar {
   overflow: hidden;
@@ -83,7 +91,8 @@ button {
   z-index: 1;
 }
 
-.allScreens-dropdown-btn:hover .allScreens-dropdown-content {
+/* dropdown displays on hover over "All Screens"*/
+.allScreens-dropdown:hover .allScreens-dropdown-content{
   display: block;
 }
   
@@ -98,7 +107,7 @@ button {
   text-align: left;
 }
   
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on hover and color of current page*/
 .allScreens-dropdown-content a:hover {
   background-color: var(--dark-orange);
 }
@@ -130,20 +139,4 @@ button {
   .column {
     width: 100%;
   }
-}
-
-.column img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-  width: auto\9;
-  /*
-  display: block;
-  margin-left: auto;
-  margin-right: auto; */
-}
-
-
-  
+}  

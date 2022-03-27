@@ -7,12 +7,6 @@ toggle between hiding and showing the dropdown content */
 function dropDown() {
     allScreensDropdown.classList.toggle("show");
   }
-
-// Toggles .show on hover
-function hover(allScreensDropdown, event){
-  allScreensDropdown.addEventListener('mouseenter', e => allScreensDropdown.classList.add('show'))
-  allScreensDropdown.addEventListener('mouseleave', e => allScreensDropdown.classList.remove('show'))
-}
   
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
