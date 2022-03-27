@@ -32,6 +32,16 @@ a{
   text-decoration: none;
 }
 
+p{
+  text-align: center;
+}
+
+/* hide table when the time is right
+
+table {
+  display: none;
+}*/
+
 
 
 .navbar {
@@ -118,37 +128,45 @@ a{
 }
 
 /*This is bela's formatting stuff that caused merge conflicts feel free to delete lmao*/
-.team-number, .match-number, .initials {
-  padding: 30px;
+.team-number, .match-number, .initials, .robot-position, .no-show,  
+.taxi, .auto-low-hub, .auto-up-hub, 
+.tele-low-hub, .tele-up-hub, .climb-attempt, .climb-level, .disconnected, .played-defense, .was-defended,
+.defense-rating{
+  padding: 10px;
   color: var(--black);
   font-weight: bolder;
 }
 
-.input[type=text] {
-  border-radius: 5px;
-} 
-
-  
-/*----------------------------------------------------------------------*/
-
-
-/* Em's column code for future */
-.column {
-  float: left;
-  width: 50%;
-  padding-top: 20px;
-
+/* moves inputs away from left edge of page */
+label{
+  margin-left: 10px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* add space between label and checkbox input */
+.no-show label, .taxi label, .climb-attempt label {
+  margin-right: 10px;
 }
 
-@media screen and (max-width: 1100px) {
-  .column {
-    width: 100%;
-  }
-}  
+.initials input, .taxi input, .tele-low-hub input, .defense-rating input{
+  margin-top: 20px;
+}
+
+/* padding changes size of input box, rounds edges */
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+/* makes input boxes bigger */
+input[type=checkbox]{
+  transform: scale(3);
+  padding: 30px;
+}
+
+select{
+  height:  60px;
+  width: auto;
+  margin: 10px;
+}
+
