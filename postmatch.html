@@ -33,7 +33,7 @@
         </div>
     </div>
     <br>
-   <!-- <form name="google-sheet">
+   <!-- <form name="google-sheet">-->
         <div class="played-defense-rating">
             <label for="played-defense-rating" class="form-label">Defense Rating:</label>
             <input type="text" id="playedDefenseRating" name="playedDefenseRating" class="form-control" size="10">
@@ -44,10 +44,10 @@
             <p>Comments:</p>
             <textarea id="comments-input" name="comments" rows="8" cols="50"></textarea>
         </div>
-        <div>
+        <!--<div>
             <button class="submit-data-btn" type="submit">Submit Data!</button>
-        </div>
-    </form>-->
+        </div>-->
+    <!--</form>-->
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded">
@@ -55,16 +55,20 @@
                 <form name="google-sheet">
                     <div id="form_alerts"></div>
                     <div class="form-group mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        <label for="name" class="form-label">Scout Initials</label>
+                        <input type="text" id="Scout_Initials" name="Scout Initials" class="form-control" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        <label for="Match #" class="form-label">Match #</label>
+                        <input type="text" id="Match_#" name="Match #" class="form-control" placeholder="Enter your email address" required>
                     </div>
+                    <!--<div class="form-group mb-3">
+                        <label for="Team #" class="form-label">Team #:</label>
+                        <textarea id="comments" name="Team #" class="form-control" placeholder="Enter your comments" rows="5" required></textarea>
+                    </div>-->
                     <div class="form-group mb-3">
-                        <label for="comments" class="form-label">Comments:</label>
-                        <textarea id="comments" name="comments" class="form-control" placeholder="Enter your comments" rows="5" required></textarea>
+                        <label for="Team #" class="form-label">Team #:</label>
+                        <input type="text" id="Team_#" name="Team #" class="form-control" placeholder="Enter your comments" required></textarea>
                     </div>
                     <div>
                         <button class="btn btn-primary me-2" type="submit">Send message!</button>

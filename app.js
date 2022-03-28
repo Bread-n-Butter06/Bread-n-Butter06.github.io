@@ -222,12 +222,12 @@ function addDataPostMatch(){ //"next" button at the end of each page
 }
 
 //triggered upon loading submit page
-function makeTable(){ //replaces td tag by id with js var
+function fillData(){ //replaces td tag by id with js var
   document.getElementById("Team_#").innerHTML = teamNum;
   document.getElementById("Match_#").innerHTML = matchNum;
-  document.getElementById("Taxi").innerHTML = taxi;
+  /*document.getElementById("Taxi").innerHTML = taxi;
   document.getElementById("aLower").innerHTML = autoLowHub;
-  document.getElementById("aUpper").innerHTML = autoUpHun;
+  document.getElementById("aUpper").innerHTML = autoUpHub;
   document.getElementById("tLower").innerHTML = teleLowHub;
   document.getElementById("tUpper").innerHTML = teleUpHub; //var defined above;
   document.getElementById("Attempted").innerHTML = climbAttempt;
@@ -237,9 +237,9 @@ function makeTable(){ //replaces td tag by id with js var
   document.getElementById("Defense_Rating").innerHTML = playedDefenseRating;
   document.getElementById("Was_Defended").innerHTML = wasDefended;
   document.getElementById("Comments").innerHTML = comments;
-  document.getElementById("No_Show").innerHTML = noShow;
+  document.getElementById("No_Show").innerHTML = noShow;*/
   document.getElementById("Scount_Initials").innerHTML = scoutInitials;
-  document.getElementById("Date").innerHTML = dataId;
+  //document.getElementById("Date").innerHTML = dataId;
 }
 
 //function othername() {
