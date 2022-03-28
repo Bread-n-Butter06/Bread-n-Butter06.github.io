@@ -24,49 +24,6 @@
  * 17. Data Entry Id - Date
  */
 
-//initialize 2D arrary allData 
-/*const allData = []; 
-  let teamNum = 0;
-  let matchNum = 0;
-  let taxi = false;
-  let autoLowHub = 0;
-  let autoUpHub = 0;
-  let teleLowHub = 0;
-  let teleUpHub = 0;
-  let climbAttempt = false;
-  let climbLevel = "";
-  let disconnected = 0;
-  let playedDefense = 0;
-
-  let wasDefended = "";
-  let playedDefenseRating = "";
-  let comments = "";
-  let noShow = false;
-  let scoutInitials = "";
-  let dataId = Date;*/
-
-/* allData[0] = teamNum;
-allData[1] = matchNum;
-allData[2] = taxi;
-allData[3] = autoLowHub;
-allData[4] = autoUpHub;
-allData[5] = teleLowHub;
-allData[6] = teleUpHub;
-allData[7] = climbAttempt;
-allData[8] = climbLevel;
-allData[9] = disconnected;
-allData[10] = playedDefense;
-allData[11] = wasDefended;
-allData[12] = playedDefenseRating;
-allData[13] = comments;
-allData[14] = noShow;
-allData[15] = scoutInitials;
-allData[16] = dataId; */
-
-/*const data = [
-  ["rahul", "delhi", "accounts dept"],
-  ["rajeev", "UP", "sales dept"]
-];*/
 
  /*= [
   "apple",
@@ -78,68 +35,61 @@ allData[16] = dataId; */
   "Gum gum fruit"
 ];*/
 
-//converts allData to URI to CSV, downloads a file created client-side
-//function convertToCSV(allData) {
-
-    //let csvContent = "data:text/csv;charset=utf-8,";
-    //let csvContent = "data:text/csv;charset=utf-8,"; 
-    //+ data.map(e => e.join(",")).join("\n");
-
-    /*allData.forEach(function(array) {
-        csvContent += array.join(",\n");
-    });*/
-
-    //csvContent = allData.join(",");
-
-    /*var encodedUri = encodeURI(csvContent);
-    window.open(encodedUri);*/
-
-    /*var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "my_data.csv");
-    document.body.appendChild(link); 
-    link.click();
-}*/
-
-/*var csv = data.map(function(d){
-       return JSON.stringify(d); //stringify inserts data within double quotes
-    })
-    .join('\n') 
-    .replace(/(^\[)|(\]$)/mg, '');
-console.log(csv);*/
-
-
-
 //pre-match
-let scoutInitials = "";
-let matchNum = 0;
-let teamNum = 0;
-let robotPosition = "";
-let noShow = false;
+var scoutInitials = "";
+var matchNum = 0;
+var teamNum = 0;
+var robotPosition = "";
+var noShow = false;
+
+sessionStorage.setItem('scoutInitials', scoutInitials); 
+sessionStorage.setItem('matchNum', matchNum); 
+sessionStorage.setItem('teamNum', teamNum); 
+sessionStorage.setItem('robotPosition', robotPosition); 
+sessionStorage.setItem('noShow', noShow); 
 
 //auto
-let taxi = false;
-let autoLowHub = 0;
-let autoUpHub = 0;
+var taxi = false;
+var autoLowHub = 0;
+var autoUpHub = 0;
+
+sessionStorage.setItem('taxi', taxi); 
+sessionStorage.setItem('autoLowHub', autoLowHub); 
+sessionStorage.setItem('autoUpHub', autoUpHub); 
 
 //tele op
-let teleLowHub = 0;
-let teleUpHub = 0;
-let climbAttempt = false;
-let climbLevel = "";
-let disconnected = 0;
-let playedDefense = 0;
-let wasDefended = "";
+var teleLowHub = 0;
+var teleUpHub = 0;
+var climbAttempt = false;
+var climbLevel = "";
+var disconnected = 0;
+var playedDefense = 0;
+var wasDefended = "";
+
+sessionStorage.setItem('teleLowHub', teleLowHub); 
+sessionStorage.setItem('teleUpHub', teleUpHub); 
+sessionStorage.setItem('climbAttempt', climbAttempt); 
+sessionStorage.setItem('climbLevel', climbLevel); 
+sessionStorage.setItem('disconnected', disconnected);
+sessionStorage.setItem('playedDefense', playedDefense);
+sessionStorage.setItem('wasDefended', wasDefended); 
 
 //post-match
-let playedDefenseRating = "";
-let comments = "";
-let dataId = Date;
+var playedDefenseRating = "";
+var comments = "";
+var dataId = Date;
+
+sessionStorage.setItem('playedDefenseRating', playedDefenseRating); 
+sessionStorage.setItem('comments', comments); 
+sessionStorage.setItem('dataId', dataId); 
+
 
 //counter buttons
-//autonomous lower hub
 var autoLowHubClicks = 0;
+var autoUpHubClicks = 0;
+var teleUpHubClicks = 0;
+var teleLowHubClicks = 0;
+//autonomous lower hub
     //increase auto lower hub counter on click of add button
     function onClickAddAL() {
         autoLowHubClicks += 1;
@@ -151,7 +101,6 @@ var autoLowHubClicks = 0;
         document.getElementById("autoLowHubClicks").innerHTML = autoLowHubClicks;
     };
 //autonomous upper hub
-var autoUpHubClicks = 0;
     function onClickAddAU() {
         //increase auto upper hub counter on click of add button
         autoUpHubClicks += 1;
@@ -165,7 +114,6 @@ var autoUpHubClicks = 0;
 
 
 //tele-op lower hub
-var teleUpHubClicks = 0;
     //increase tele-op lower hub counter on click of add button
     function onClickAddTU() {
         teleUpHubClicks += 1;
@@ -177,7 +125,6 @@ var teleUpHubClicks = 0;
         document.getElementById("autoUpHubClicks").innerHTML = teleUpHubClicks;
     };
 //tele-op upper hub
-var teleLowHubClicks = 0;
     //increase tele-op upper hub counter on click of add button
     function onClickAddTL() {
         teleLowHubClicks += 1;
@@ -189,20 +136,18 @@ var teleLowHubClicks = 0;
         document.getElementById("teleLowHubClicks").innerHTML = teleLowHubClicks;
     };
 
-//somthing to trigger js to take data
-//allData.push(input); //adds each datum to allData
 function addDataPreMatch(){ //"next" button at the end of each page, assigns user imput to var
-  scoutInitials = document.getElementById("initials-input").value; //goes through ids and data for that specific page
-  matchNum = document.getElementById("match-number-input").value;
-  teamNum = document.getElementById("team-number-input").value;
-  robotPosition = document.getElementById("robot-position-input").value;
-  noShow = document.getElementById("no-show-imput").value;
+ 
+
+  sessionStorage.setItem('scoutInitials', scoutInitials); 
+  
 }
 
 function addDataAuto(){ //"next" button at the end of each page
   taxi = document.getElementById("taxi-input").value;
   autoLowHub = autoUpHubClicks;
   autoUpHub = autoUpHubClicks;
+  console.log(autoLowHub);
 }
 
 function addDataTeleOp(){ //"next" button at the end of each page
@@ -307,4 +252,5 @@ function dropDown() {
         })
     
   }*/
+  
   
