@@ -1,219 +1,182 @@
 :root {
-   --maroon: #8f2052;
-   --orange: #d05323;
-   --dark-orange: #a03e18;
-   --white: #ffffff;
-   --light-gray: #d4c5c5;
-   --gray: #b0a7a7;
-   --dark-gray: #4f4c45; 
-   --black: #000000;
+  --maroon: #8f2052;
+  --orange: #d05323;
+  --dark-orange: #a03e18;
+  --white: #ffffff;
+  --light-gray: #d4c5c5;
+  --gray: #b0a7a7;
+  --dark-gray: #4f4c45; 
+  --black: #000000;
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
-  }
-
-/* text in title */
-h1 {
-  background-color: var(--orange);
-  color: var(--maroon);
-  padding: 12px;
-  font-size: 20px;
-  text-align: center;
+  text-decoration: none;
 }
 
 /* disables double touch to zoom on mobile*/
 button {
-    touch-action: manipulation;
-}
-
-/* removes underline etc on all links */
-a{
-  text-decoration: none;
+  touch-action: manipulation;
 }
 
 p{
   text-align: center;
+  margin: none;
 }
 
-.comments p{
-  text-align: left;
+h1 {
+ 
+  background-color: var(--orange);
+  color: var(--maroon);
+  padding: 12px;
+  font-size: 175%;
+  text-align: center;
+  font-weight: 1000;
+  font-style: italic;
+
+  text-shadow:
+  -1px -1px 0 var(--white),
+  1px -1px 0 var(--white),
+  -1px 1px 0 var(--white),
+  1px 1px 0 var(--white);  
 }
 
-/* hide table when the time is right
+#title-container {
+  background-color: var(--orange);
+}
 
-table {
-  display: none;
-}*/
-
-
-
-.navbar {
-  overflow: hidden;
-  color: var(--black);
-  font-family: 'Roboto', sans-serif;
-  background: var(--dark-gray);
-
-  /* centers links on nav bar*/
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+.navbar{
+    color: var(--white);
+    background-color: var(--dark-gray);
+    text-decoration: none;
+    padding: 0px;
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  font-size: 16px;
-  background-color: var(--dark-gray);
-  color: var(--white);
-  text-align: center;
-  padding: 14px 16px;
+ 
+display: block;
+ 
+color: var(--white);
+ 
+background-color: var(--dark-gray);
+ 
+text-decoration: none;
+ 
+padding: 15px;
+ 
+width: 130%;
+ 
+text-align: center;
+ 
+margin: 0px;
+ 
+font-size: 130%;
+ 
+font-weight: 700;
+}
+
+a {
   text-decoration: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.allScreens-dropdown {
-  float: left;
-  overflow: hidden;
-  background-color: var(--dark-gray);
+.nav-item a{
+  width: 130%;
 }
 
-.allScreens-dropdown .allScreens-dropdown-btn {
-  cursor: pointer;
-  font-size: 16px;  
+.navbar a:hover {
+background-color: var(--orange);
+color: var(--white);
+}
+
+.dropdown-menu {
+  margin: 0px;
+  padding: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  background-color: var(--dark-gray);
+  padding: none;
+}
+
+a.dropdown-item {
+  font-weight: 700;
+  font-size: 18px;
+
+}
+
+img {
+  object-fit: cover;
+}
+
+/* counter buttons */
+/* down buttons */
+#auto-low-hub-downbtn, #auto-up-hub-downbtn, #tele-low-hub-downbtn, #tele-up-hub-downbtn {
+  height: 100px;
+  width: 180px;
+  border-radius: 20%;
+  color: var(--white);
+  background-color: var(--maroon);
   border: none;
-  outline: none;
+  padding: none;
+  font-size: 30px;
+}
+
+/* up buttons */
+#auto-low-hub-upbtn, #auto-up-hub-upbtn, #tele-low-hub-upbtn, #tele-up-hub-upbtn{
+  height: 100px;
+  width: 180px;
+  border-radius: 20%;
   color: var(--white);
-  padding: 14px 16px;
-  background-color: var(--dark-gray);
-  font-family: inherit;
-  margin: 0;
+  background-color: var(--maroon);
+  border: none;
+  padding: none;
+  font-size: 30px;
 }
 
-.navbar a:hover, .allScreens-dropdown:hover .allScreens-dropdown-btn, 
-.allScreens-dropdown-btn:focus {
-  background-color: var(--orange);
-}
-  
-/* Dropdown Content (Hidden by Default) */
-.allScreens-dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-  z-index: 1;
-}
-
-/* dropdown displays on hover over "All Screens"*/
-.allScreens-dropdown:hover .allScreens-dropdown-content{
-  display: block;
-}
-  
-/* Links inside the dropdown */
-.allScreens-dropdown-content a {
-  float: none;
-  background-color: var(--orange);
-  color: var(--white);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-  
-/* Change color of dropdown links on hover and color of current page*/
-.allScreens-dropdown-content a:hover {
-  background-color: var(--dark-orange);
-}
-  
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
-
-/*This is bela's formatting stuff that caused merge conflicts feel free to delete lmao*/
-.team-number, .match-number, .initials, .robot-position, .no-show,  
-.taxi, .auto-low-hub, .auto-low-hub-txt, .auto-up-hub-txt, .auto-up-hub, 
-.tele-low-hub, .tele-up-hub, .tele-low-hub-txt, .tele-up-hub-txt, .climb-attempt, .climb-level, .disconnected, .played-defense, .was-defended,
-.defense-rating, .comments{
-  padding: 10px;
+.btndis {
+  font-size: 50px;
+  font-weight: bold;
   color: var(--black);
-  font-weight: bolder;
 }
 
-/* moves everything away from left edge of page */
-label{
-  margin-left: 10px;
+#count {
+  padding: 0;
 }
 
-/* add space between label and checkbox input */
-.no-show label, .taxi label, .climb-attempt label {
-  margin-right: 10px;
+.auto-low-hub-txt .auto-up-hub-txt{
+  padding: 30px;
 }
 
-/* padding changes size of input box, rounds edges */
-input {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
+#middle-col {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+label:hover {
+  color:#000000;
 }
 
 /* makes input checkboxes bigger */
 input[type=checkbox]{
-  /*transform: scale(3);*/
+  justify-content: center;
   height: 60px;
   width: 60px;
   padding: 30px;
 }
 
-/* change size of box for select dropdown
-select{
-  height:  60px;
-  width: auto;
-  margin: 10px;
+.form-check .form-check-input {
+  float: none;
+  vertical-align: middle;
+  margin: 0;
 }
 
-/* counter buttons */
-/* down buttons */
-.auto-low-hub-downbtn, .auto-up-hub-downbtn, .tele-low-hub-downbtn, .tele-up-hub-downbtn {
-  /*position: absolute;
-  top: 250px;*/
-  left: 20px;
-  height: 120px;
-  width: 120px;
-  margin-right: 30px;
-  margin-left: 20px;
-  border-radius: 50%;
-  border: none;
-  color: var(--white);
-  font-size: 40px;
-  background-color: var(--maroon);
+.form-check {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* up buttons */
-.auto-low-hub-upbtn, .auto-up-hub-upbtn, .tele-low-hub-upbtn, .tele-up-hub-upbtn{
-  /*position: absolute;
-  top: 250px;*/
-  left: 100px;
-  height: 120px;
-  width: 120px;
-  margin-left: 30px;
-  margin-right: 20px;
-  border-radius: 50%;
-  border: none;
-  color: var(--white);
-  font-size: 40px;
-  background-color: var(--maroon);
+.form-check-label {
+  padding-right: 45px;
+
 }
 
-/* displays buttons and text inline, not vertical */
-.auto-low-hub, .auto-up-hub, .tele-low-hub, .tele-up-hub{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* enlarges number between up and down buttons */
-a.btndis{
-  font-size: 50px;
-}
