@@ -79,7 +79,7 @@ a {
 }
 
 .nav-item a{
-  width: 130%;
+  width: 100%;
 }
 
 .navbar a:hover {
@@ -95,12 +95,17 @@ color: var(--white);
 .navbar-nav > li > .dropdown-menu {
   background-color: var(--dark-gray);
   padding: none;
+  width: auto;
 }
 
 a.dropdown-item {
   font-weight: 700;
   font-size: 18px;
+  width: 100%;
+}
 
+.row {
+  --bs-gutter-x: 0;
 }
 
 img {
@@ -108,22 +113,10 @@ img {
 }
 
 /* counter buttons */
-/* down buttons */
-#auto-low-hub-downbtn, #auto-up-hub-downbtn, #tele-low-hub-downbtn, #tele-up-hub-downbtn {
+#auto-low-hub-downbtn, #auto-up-hub-downbtn, #tele-low-hub-downbtn, #tele-up-hub-downbtn,
+#auto-low-hub-upbtn, #auto-up-hub-upbtn, #tele-low-hub-upbtn, #tele-up-hub-upbtn {
   height: 100px;
-  width: 180px;
-  border-radius: 20%;
-  color: var(--white);
-  background-color: var(--maroon);
-  border: none;
-  padding: none;
-  font-size: 30px;
-}
-
-/* up buttons */
-#auto-low-hub-upbtn, #auto-up-hub-upbtn, #tele-low-hub-upbtn, #tele-up-hub-upbtn{
-  height: 100px;
-  width: 180px;
+  width: 44%;
   border-radius: 20%;
   color: var(--white);
   background-color: var(--maroon);
