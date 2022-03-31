@@ -30,14 +30,14 @@ h1 {
   padding: 12px;
   font-size: 175%;
   text-align: center;
-  font-weight: 1000;
+  font-weight: 900;
   font-style: italic;
 
   text-shadow:
-  -1px -1px 0 var(--white),
-  1px -1px 0 var(--white),
-  -1px 1px 0 var(--white),
-  1px 1px 0 var(--white);  
+  -1.5px -1.5px 0 var(--white),
+  1.5px -1.5px 0 var(--white),
+  -1.5px 1.5px 0 var(--white),
+  1.5px 1.5px 0 var(--white);  
 }
 
 #title-container {
@@ -52,26 +52,16 @@ h1 {
 }
 
 .navbar a {
- 
-display: block;
- 
-color: var(--white);
- 
-background-color: var(--dark-gray);
- 
-text-decoration: none;
- 
-padding: 15px;
- 
-width: 130%;
- 
-text-align: center;
- 
-margin: 0px;
- 
-font-size: 130%;
- 
-font-weight: 700;
+  display: block;
+  color: var(--white);
+  background-color: var(--dark-gray);
+  text-decoration: none;
+  padding: 15px;
+  width: 130%;
+  text-align: center;
+  margin: 0px;
+  font-size: 130%;
+  font-weight: 700;
 }
 
 a {
@@ -83,8 +73,8 @@ a {
 }
 
 .navbar a:hover {
-background-color: var(--orange);
-color: var(--white);
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 .dropdown-menu {
@@ -173,3 +163,13 @@ input[type=checkbox]{
 
 }
 
+ul{
+  list-style-type: none;
+}
+
+h2{
+  background-color: var(--maroon);
+  color: var(--white);
+  padding: 5px;
+  text-align: center;
+}

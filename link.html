@@ -10,13 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
-    
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
@@ -26,8 +19,9 @@
         <h1> FRC Team 401 Scouting</h1>
     </div>
     <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
-        <ul class="container-sm flex-nowrap align-middle">            
+        <ul class="container-sm flex-nowrap align-middle">
             <li class="nav-item container-sm">
+                <a href="index.html">Back</a> 
             </li>
             <li class="nav-item dropdown container-sm">
                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Pre-Match</a>
@@ -46,8 +40,6 @@
 
     <br>
 
-    <a href="index2.html"><h1>LONG SCROLL PAGE TEST --></h1></a>
-
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8" id="middle-col">
@@ -55,48 +47,23 @@
             <div class="row shadow border bg-light p-5 rounded">
                 <div class="row flex-sm-row">
                     <div class="mb-3 mt-3">
-                        <label for="scoutInitials" class="form-label">Scout Initials:</label>
-                        <input type="scoutInitials" class="form-control" id="scoutInitials" placeholder="Enter Initials" name="scoutInitials">
+                        <h2>Setting Up A Data Base</h2>
+                        <br>
+                        <p>1. Make a copy of <a href="">this template</a></p>
+                        <p>2. Do Extensions > Apps Scripts</p>
+                        <p>3. Paste the URL here: </p>
+                        <input type="url" class="form-control" id="url-input" placeholder="URL goes here" name="url">
+                        <p>4. You are all set! Go <a href="index.html">back</a> to start scouting.</p>
+                        <p>5. Come back to relink this website to a different spreadsheet anytime.</p>
+                        <p>DISCLAIMER: Please do not rename the first cell in each column of the template.</p>
                     </div>
-                </div>
-            </div>
-            <!--</form>-->
-            <div class="row shadow border bg-light p-5 rounded">
-                <div class="row flex-sm-row">
-                    <div class="mb-3 mt-3">
-                        <label for="matchNum" class="form-label">Match Number:</label>
-                        <input type="matchNum" class="form-control" id="matchNum" placeholder="####" name="matchNum">
-                    </div>
-                </div>
-            </div>
-            <div class="row shadow border bg-light p-5 rounded">
-                <div class="row flex-sm-row">
-                    <div class="mb-3 mt-3">
-                        <label for="teamNum" class="form-label">Team Number:</label>
-                        <input type="teamNum" class="form-control" id="teamNum" placeholder="####" name="teamNum">
-                    </div>
-                </div>
-            </div>
-            <div class="row shadow border bg-light p-5 rounded">
-                <div class="row flex-sm-row">
-                    <label for="robot-position-select-input" class="form-label">Robot Position:</label>
-                    <select class="form-select" aria-label="robot-position-select-input">
-                        <option selected>Select</option>
-                        <option value="1">Red 1</option>
-                        <option value="2">Red 2</option>
-                        <option value="3">Red 3</option>
-                        <option value="4">Blue 1</option>
-                        <option value="5">Blue 2</option>
-                        <option value="6">Blue 3</option>
-                    </select>
                 </div>
             </div>
         </div>
         <div class="col-sm-2"></div></div>
     </div>
     <br>
-        <p><a href="link.html">Set up Google Sheets</a></p>
-    <br>
+
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
