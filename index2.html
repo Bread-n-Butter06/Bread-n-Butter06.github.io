@@ -33,14 +33,13 @@
     <div class="container-fluid" id="title-container">
         <h1> FRC Team 401 Scouting</h1>
     </div>
-    <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+    <!--<nav class="navbar navbar-expand-sm justify-content-center sticky-top">
         <ul class="container-sm flex-nowrap align-middle">
             <li class="nav-item container-sm">
                 <a href="teleop.html">Back</a>
             </li>
             <li class="nav-item dropdown container-sm">
-                <!-- idk what to tell you the dropdown just doesnt drop down on this page -->
-                <!--<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Post Match</a>-->
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Post Match</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="index.html">Pre-Match</a></li>
                     <li><a class="dropdown-item" href="auto.html">Autonomous</a></li>
@@ -49,42 +48,97 @@
                 </ul>
             </li>
             <li class="nav-item container-sm">
-                <a href="#prematch">Next</a>
+                <a href="#scout">Next</a>
             </li>
         </ul>
-    </nav>
-
-
-    <br>
-
+    </nav>-->
 
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-8 col-md-8 mx-auto shadow border bg-white p-4 rounded">
+            <div class="col-lg-10 col-md-8 mx-auto shadow border bg-white p-4 rounded">
                 <form name="google-sheet">
                     <div id="form_alerts"></div>
-                    <h2 class="text-center fw-bold mb-3"><a id="prematch">PRE-MATCH</a></h2>
-                     <div class="form-group mb-3">
+                    <!--<h2 class="text-center fw-bold mb-3">PRE-MATCH</h2>-->
+
+
+                    <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+                        <ul class="container-sm flex-nowrap align-middle">
+                            <li class="nav-item container-sm">
+                                <h2>PRE-MATCH</h2>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="form-group mb-3">
                         <label for="Team #" class="form-label">Team #:</label>
                         <input type="text" id="Team_#" name="Team #" class="form-control" placeholder="Enter the team number" required></textarea>
                     </div>
                     <div class="form-group mb-3">
                         <label for="Match #" class="form-label">Match #</label>
-                        <input type="text" id="Match_#" name="Match #" class="form-control" placeholder="Enter the mathc number" required>
+                        <input type="text" id="Match_#" name="Match #" class="form-control" placeholder="Enter the match number" required>
                     </div>
                     <!--<div class="form-group mb-3">
                         <label for="Team #" class="form-label">Team #:</label>
                         <textarea id="comments" name="Team #" class="form-control" placeholder="Enter your comments" rows="5" required></textarea>
                     </div>-->
                     <br>
-                    <h2 class="text-center fw-bold mb-3">AUTONOMOUS</h2>
 
-                    <h2 class="text-center fw-bold mb-3">TELE-OP</h2>
+
+                    <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+                        <ul class="container-sm flex-nowrap align-middle">
+                            <li class="nav-item container-sm">
+                                <h2>AUTONOMOUS</h2>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="form-check mt-3 mb-3">
+                        <label class="form-check-label" for="taxi-input">Taxied?</label>
+                        <input class="form-check-input" type="checkbox" id="taxi-input">
+                    </div>
+
+                    <label for="auto-low-hub" class="auto-low-hub-txt">Lower Cargo Scored:</label>
+                    <br>
+                    <br>
+                    <div class="row flex-sm-row flex-wrap-reverse">
+                        <div class="col-sm-5 text-center" id="count">
+                            <button class="btn btn-primary" id="auto-low-hub-downbtn" onClick="onClickSubAL()">
+                            <i class="fa fa-minus fa-lg"></i>
+                            </button>
+                        </div>
+                        <div class="col-sm-2" id="count">
+                            <p><a id="autoLowHubClicks" class="btndis">0</a></p>
+                        </div>
+                        <div class="col-sm-5 text-center" id="count">
+                            <button class="btn btn-primary" id="auto-low-hub-upbtn" onClick="onClickAddAL()">
+                                <i class="fa fa-plus fa-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Match #" class="form-label">Match #</label>
+                        <input type="text" id="Match_#" name="Match #" class="form-control" placeholder="Enter the match number" required>
+                    </div>
+
+                    <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+                        <ul class="container-sm flex-nowrap align-middle">
+                            <li class="nav-item container-sm">
+                                <h2>TELE-OP</h2>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="form-group mb-3">
                         <label for="played-defense-rating" class="form-label">Defense Rating:</label>
                         <input type="text" id="playedDefenseRating" name="playedDefenseRating" class="form-control" size="10">
                     </div>
-                    <h2 class="text-center fw-bold mb-3">POST-MATCH</h2>
+
+
+                    <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+                        <ul class="container-sm flex-nowrap align-middle">
+                            <li class="nav-item container-sm">
+                                <h2>POST-MATCH</h2>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">Scout Initials</label>
                         <input type="text" id="Scout_Initials" name="Scout Initials" class="form-control" placeholder="Enter initials" required>
@@ -93,6 +147,28 @@
                         <label for="comments" class="form-label">Comments:</label>
                         <textarea type="text" id="comments" name="comments" class="form-control" placeholder="Enter your comments" required></textarea>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div>
                         <button class="btn btn-primary me-2" type="submit">Submit!</button>
                         <button class="btn btn-danger" type="reset">Reset!</button>
@@ -101,6 +177,9 @@
             </div>
         </div>
     </div>
+    <br>
+        <p><a href="link.html">Set up Google Sheets</a></p>
+    <br>
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
 </body>
