@@ -24,7 +24,7 @@
  * 17. Data Entry Id - Date
  */
 
-localStorage.addItem('url', document.getElementById('url-input').value;
+localStorage.addItem('url', document.getElementById('url-input').value);
 
 
 
